@@ -13,14 +13,14 @@
 ActiveRecord::Schema.define(version: 20180304192205) do
 
   create_table "sales", force: :cascade do |t|
-    t.string   "buyer"
-    t.text     "description"
-    t.decimal  "unit_price"
-    t.integer  "quantity"
-    t.string   "supplier"
-    t.text     "address"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.string   "buyer",                                null: false
+    t.text     "description",                          null: false
+    t.decimal  "unit_price",  precision: 14, scale: 2
+    t.integer  "quantity",                             null: false
+    t.string   "supplier",                             null: false
+    t.text     "address",                              null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
   end
 
 end

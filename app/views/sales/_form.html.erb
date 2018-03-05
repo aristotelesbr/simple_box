@@ -1,0 +1,7 @@
+<%= form_for(import, url: sales_path, html: { multipart: true }) do |f| %>
+  
+  <%= f.label :file, t('labels.sale.file') %>
+  <%= f.file_field :file %>
+  
+  <%= f.submit class: 'button' %>
+<% end %>

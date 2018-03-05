@@ -5,7 +5,7 @@ kill:
 	@docker-compose kill
 
 test-rspec:
-	@docker-compose run --rm web rspec
+	@docker-compose run --rm web rspec $(ARG)
 
 create:
 	@docker-compose run --rm web rails db:create
