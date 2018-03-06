@@ -8,30 +8,12 @@
 </p>
 <div class="col s12 m6">
   <div class="card-panel">
-    <table class="striped">
-      <thead>
-        <tr>
-          <th><%= t('labels.sale.buyer') %></th>
-          <th><%= t('labels.sale.description') %></th>
-          <th><%= t('labels.sale.unit_price') %></th>
-          <th><%= t('labels.sale.quantity') %></th>
-          <th><%= t('labels.sale.supplier') %></th>
-          <th><%= t('labels.sale.address') %></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @sales.each do |sale| %>
-          <tr>
-            <td><%= sale.buyer %></td>
-            <td><%= sale.description %></td>
-            <td><%= sale.unit_price %></td>
-            <td><%= sale.quantity %></td>
-            <td><%= sale.supplier %></td>
-            <td><%= sale.address %></td>
-          </tr>
-        <% end %>
-      </tbody>
-    </table>
+    <div id="sales">
+      <%= render 'sales', sales: @sales %>
+    </div>
   </div>
+</div>
+
+<div id="paginator">
+  <%= paginate @sales, remote: true %>
 </div>

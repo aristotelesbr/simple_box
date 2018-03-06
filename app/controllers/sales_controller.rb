@@ -1,7 +1,7 @@
 # frozen_string_literal
 class SalesController < ApplicationController
   def index
-    @sales = Sale.order(created_at: 'DESC')
+    @sales = Sale.order(created_at: 'DESC').page(params[:page])
   end
 
   def new
