@@ -1,24 +1,62 @@
-# README
+# SimpleBox
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SimpleBox is a simple system for importing data from a text file.
 
-Things you may want to cover:
+## Versions
 
-* Ruby version
+Ruby:
+  
+  2.2.0
 
-* System dependencies
+Rails:
+  
+  '5.0.0.1'
 
-* Configuration
+Database:
 
-* Database creation
+  'sqlite3'
 
-* Database initialization
+## Installation
 
-* How to run the test suite
+Assuming you already have the environment properly configured on your machine after cloning the project do:
+  
+  $ cd simple_box
 
-* Services (job queues, cache servers, search engines, etc.)
+Install dependencies:
 
-* Deployment instructions
+  $ bundle install
 
-* ...
+Configuring the database:
+
+  $ rails db:create db:migrate
+
+Run the tests:
+
+  $ bundle exec rspec
+
+Start server:
+
+  $ rails s
+
+## Docker instalation
+
+builder installation:
+
+$ docker-compose build
+
+Database setup:
+
+$ docker-compose run --rm web 
+
+rails db:create db:migrate
+
+Start server:
+
+$ docker-compose up
+
+## License
+
+The project is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+
+
+Done with :coffee: 
