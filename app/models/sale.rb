@@ -4,4 +4,5 @@ class Sale < ApplicationRecord
             :supplier, :address, presence: true
 
   validates_numericality_of :unit_price, :quantity
+  def persist!; end
 end

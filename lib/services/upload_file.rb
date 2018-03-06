@@ -14,13 +14,16 @@ module Services
     end
 
     def save
-      return false unless valid_object
+      return false unless valid_object && persist_normalized
     end
 
     def valid_object
-      valid_type?
-      valid_extension?
-      valid_header?
+      valid_type? && valid_extension? && valid_header?
+    end
+
+    def persist_normalized
+      @normalized = Normalizer.new(content_file).normalize!
+      Sale.persist!(@normalized)
     end
 
     private
@@ -34,8 +37,12 @@ module Services
     end
 
     def valid_header?
-      header = File.read(@tempfile).split("\n").first.split("\t")
+      header = content_file.split("\n").first.split("\t")
       header.eql?(columns_attributes)
+    end
+
+    def content_file
+      File.read(@tempfile)
     end
 
     def columns_attributes
