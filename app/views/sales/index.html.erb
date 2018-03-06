@@ -1,27 +1,37 @@
-<h1><%= t('titles.sales.index') %></h1>
-<%= link_to t('actions.new'), new_sale_path %>
-<table>
-  <thead>
-    <tr>
-      <th><%= t('labels.sale.buyer') %></th>
-      <th><%= t('labels.sale.description') %></th>
-      <th><%= t('labels.sale.unit_price') %></th>
-      <th><%= t('labels.sale.quantity') %></th>
-      <th><%= t('labels.sale.supplier') %></th>
-      <th><%= t('labels.sale.address') %></th>
-    </tr>
-  </thead>
+<p class="flow-text center-align">
+  <%= t('titles.sales.index') %>
+</p>
+<p class="right-align">
+  <%= link_to new_sale_path do %>
+    <i class="material-icons purple-text text-darken-3 right">add</i><%= t('actions.new') %>
+  <% end %>
+</p>
+<div class="col s12 m6">
+  <div class="card-panel">
+    <table class="striped">
+      <thead>
+        <tr>
+          <th><%= t('labels.sale.buyer') %></th>
+          <th><%= t('labels.sale.description') %></th>
+          <th><%= t('labels.sale.unit_price') %></th>
+          <th><%= t('labels.sale.quantity') %></th>
+          <th><%= t('labels.sale.supplier') %></th>
+          <th><%= t('labels.sale.address') %></th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @sales.each do |sale| %>
-      <tr>
-        <td><%= sale.buyer %></td>
-        <td><%= sale.description %></td>
-        <td><%= sale.unit_price %></td>
-        <td><%= sale.quantity %></td>
-        <td><%= sale.supplier %></td>
-        <td><%= sale.address %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @sales.each do |sale| %>
+          <tr>
+            <td><%= sale.buyer %></td>
+            <td><%= sale.description %></td>
+            <td><%= sale.unit_price %></td>
+            <td><%= sale.quantity %></td>
+            <td><%= sale.supplier %></td>
+            <td><%= sale.address %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

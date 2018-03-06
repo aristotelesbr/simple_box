@@ -1,0 +1,21 @@
+/*
+*= require material_icons
+*/
+
+@import "materialize/components/color";
+
+// colors
+$primary-color: color("purple", "darken-2") !default;
+$primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+
+$secondary-color: color("purple", "darken-3") !default;
+
+$link-color: color("purple", "darken-1") !default;
+@import 'materialize';
+@import 'side_nav';
+@import 'custom';
+
+body {
+  background: #f9f4f2
+}

@@ -13,15 +13,15 @@ module Services
       @tempfile = options[:file].tempfile unless options.empty?
     end
 
-    def save
-      return false unless valid_object && persist_normalized
+    def valid?
+      valid_object?
     end
 
-    def valid_object
+    def valid_object?
       valid_type? && valid_extension? && valid_header?
     end
 
-    def persist_normalized
+    def save
       @normalized = Normalizer.new(content_file).normalize!
       Persist.new(@normalized).perform
     end

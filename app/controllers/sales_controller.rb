@@ -10,10 +10,12 @@ class SalesController < ApplicationController
 
   def create
     @import = Services::UploadFile.new(sale_params)
-    if @import.save
-      redirect_to root_path, notice: t('flash.sales.create.notice')
-    else
-      render :new
+    binding.pry
+    if @import.valid?
+      @import.save
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: t('flash.sales.create.notice') }
+      end
     end
   end
 

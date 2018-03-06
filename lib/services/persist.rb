@@ -17,8 +17,8 @@ module Services
 						description: arr[1],
 						unit_price: arr[2],
 						quantity: arr[3].to_i,
-						supplier: arr[4].to_f,
-						address: arr[5]
+						supplier: arr[5],
+						address: arr[4]
 					)
 				end
 				true

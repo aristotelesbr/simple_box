@@ -29,6 +29,14 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Custom gems
+# Use materialzecss in your rails asset pipeline.
+gem 'materialize-sass', '~> 0.100.2'
+# A simple Rails wrapper for Google Material Icons
+gem 'material_icons'
+# Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
+gem 'kaminari', '~> 1.1', '>= 1.1.1'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
@@ -54,8 +62,6 @@ group :test do
   gem 'factory_bot_rails'
   # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc.
   gem 'faker'
-  # Making callback tests easy on the fingers and eyes
-  gem 'shoulda-callback-matchers', '~> 1.1.1'
   # Making tests easy on the fingers and eyes
   gem 'shoulda-matchers', '~> 3.1'
 end

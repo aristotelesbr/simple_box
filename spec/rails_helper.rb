@@ -66,8 +66,7 @@ RSpec.configure do |config|
 
   # FactoryBot setings
   config.include FactoryBot::Syntax::Methods
-  # Test existence of your Rails callbacks without having to call them
-  config.include(Shoulda::Callback::Matchers::ActiveModel)
+
   # Custom helpers
   config.include UploadFileHelper
 end

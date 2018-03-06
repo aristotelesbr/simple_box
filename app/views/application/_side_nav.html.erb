@@ -1,0 +1,22 @@
+<ul id="slide-out" class="side-nav fixed">
+  <li>
+    <div class="user-view">
+      <div class="background">
+        <%= image_tag 'img1' %>
+      </div>
+      <%= image_tag 'img2', class: 'circle' %> 
+      <a href="#!name"><span class="white-text name">Seja bem vindo!</span></a>
+      <a href="#!email"><span class="white-text email"><%= to_br(Date.current) %></span></a>
+    </div>
+  </li>
+
+  <li><%= link_to t('nav.item0'), new_sale_path %></li>
+  <li><a href="#"><%= total %></a></li>
+  <li><div class="divider"></div></li>
+  <li><% link_to t('nav.item1'), root_path %></li>
+  <% last_sales.each do |d| %>
+    <li><a href="#"><%= to_br(d.created_at) %></a></li>
+  <% end %>
+  <li><div class="divider"></div></li>
+  <li><a href="#"> <%= t('nav.item3') %><%= Date.current.strftime('%Y') %></a></li>
+</ul>
