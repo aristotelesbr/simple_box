@@ -6,7 +6,7 @@ RSpec.describe Services::Normalizer, type: :model do
       let(:body) { build(:normalizer) }
 
       it 'with normalized content' do
-        normalized = body.split("\n").drop(1)
+        normalized = Services::Normalizer.new(body).normalize!
         expect(normalized).not_to eq(
           "Comprador\tDescrição\tPreço Unitário\tQuantidade\tEndereço\tFornecedor"
         )
