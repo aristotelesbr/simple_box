@@ -1,0 +1,5 @@
+pt-BR:
+  flash:
+    sales:
+      create:
+        notice: 'Arquivo importado com sucesso!'

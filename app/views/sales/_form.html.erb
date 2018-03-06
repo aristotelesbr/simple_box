@@ -1,8 +1,10 @@
 <%= form_for(import, url: sales_path, html: { multipart: true }) do |f| %>
   
-  <%= f.file_field :file, class: 'more-bottom' %>
+  <%= f.file_field :file, class: 'more-bottom', required: true %>
   <br />
   <div class="actions">
-    <%= f.submit class: 'button', class: 'btn' %> 
+    <button  class="btn waves-effect waves-light" type="submit" name="action">
+      Enviar arquivo <i class="material-icons right">send</i>
+    </button>
   </div>
 <% end %>

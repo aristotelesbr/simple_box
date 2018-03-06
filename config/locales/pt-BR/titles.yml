@@ -1,0 +1,13 @@
+pt-BR:
+  titles:
+    sale:
+      index:
+        title: 'Listagem de vendas'
+        buyer: 'Comprador'
+        description: 'Descrição'
+        unit_price: 'Preço Unitário'
+        quantity: 'Quantidade'
+        supplier: 'Fornecedor'
+        address: 'Endereço'
+      new:
+        title: 'Importar novo arquivo'

@@ -8,6 +8,6 @@ module ApplicationHelper
   end
 
   def total
-  	@total ||= Sale.sum(:unit_price)
+  	@total ||= Sale.all.inject(0) { |tot, i| tot += (i.unit_price * i.quantity) }
   end
 end

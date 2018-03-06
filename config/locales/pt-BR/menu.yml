@@ -1,0 +1,5 @@
+pt-BR:
+  menu:
+    total: 'Total de vendas'
+    new_sale: 'Importar novo arquivo'
+    footer: "SimpleBox® %{year}"

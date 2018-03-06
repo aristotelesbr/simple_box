@@ -36,6 +36,8 @@ gem 'materialize-sass', '~> 0.100.2'
 gem 'material_icons'
 # Kaminari is a Scope & Engine based, clean, powerful, agnostic, customizable and sophisticated paginator for Rails 4+
 gem 'kaminari', '~> 1.1', '>= 1.1.1'
+# brazilian rails old school :p
+gem 'brdinheiro', '~> 3.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
