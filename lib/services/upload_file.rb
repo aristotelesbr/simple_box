@@ -23,7 +23,7 @@ module Services
 
     def persist_normalized
       @normalized = Normalizer.new(content_file).normalize!
-      Sale.persist!(@normalized)
+      Persist.new(@normalized).perform
     end
 
     private

@@ -4,6 +4,6 @@ FactoryBot.define do
   		text File.read(File.open(File.join(Rails.root, 'spec', 'fixtures', 'files', 'dados.txt')))
     end
 
-    initialize_with { Services::Normalizer.new(text) }
+    initialize_with { Services::Normalizer.new(text).normalize! }
   end
 end

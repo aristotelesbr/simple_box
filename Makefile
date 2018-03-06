@@ -20,4 +20,4 @@ setup:
 	@docker-compose run --rm web rails db:drop db:create db:migrate db:seed
 
 console:
-	@docker-compose run --rm web bundler exec rails console
+	@docker-compose run --rm web rails console
