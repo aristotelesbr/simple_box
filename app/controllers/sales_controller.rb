@@ -10,7 +10,6 @@ class SalesController < ApplicationController
 
   def create
     @import = Services::UploadFile.new(sale_params)
-    binding.pry
     if @import.valid?
       @import.save
       respond_to do |format|
