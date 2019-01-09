@@ -1,5 +1,5 @@
 module Services
-  # Class to seach
+  # Class to upload file
   class UploadFile
     include ActiveModel::Validations
     include ActiveModel::Model
